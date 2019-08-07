@@ -2,17 +2,24 @@ import React from 'react';
 
 import './App.css';
 
-function Informationbox(){
-  return(
-    <div id= "box">Información </div>
-  )
-}
+const Informationbox = () => <div id="box">Information </div>;
 
+function Tasklist() {
+  return (
+    <div>
+      <ul>
+        <li type="disc">React.</li>
+        <li type="disc">Redux.</li>
+        <li type="disc">UI Testing.</li>
+      </ul>
+    </div>
+  );
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        BIENVENIDO AQUI SERA VERA TU LISTA <Informationbox/> 
+        WELCOME YOUR LIST <Informationbox /> <Tasklist />
       </header>
     </div>
   );
