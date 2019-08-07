@@ -1,23 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
+const Informationbox = () => <div id="box">Information </div>;
+
+function Tasklist() {
+  return (
+    <div>
+      <ul>
+        <li type="disc">React.</li>
+        <li type="disc">Redux.</li>
+        <li type="disc">UI Testing.</li>
+      </ul>
+    </div>
+  );
+}
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        WELCOME YOUR LIST <Informationbox /> <Tasklist />
       </header>
     </div>
   );
