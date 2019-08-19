@@ -1,0 +1,41 @@
+import React, { Component } from 'react';
+
+export default class TaskForm extends Component {
+  state = {
+    title: '',
+    description: ''
+  };
+
+  onSubmit = event => {
+    event.preventDefault();
+  };
+  onChange = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  render() {
+    return (
+      <form onSubmit={this.onSubmit}>
+        <input
+          type="text"
+          name="title"
+          placeholder="write a task"
+          onChange={this.onChange}
+          value={this.state.title}
+        />
+        <br />
+        <br />
+        <textarea
+          placeholder=" write a description"
+          name="description"
+          onChange={this.onChange}
+          value={this.state.description}
+        />
+        <br />
+        <input type="submit" />
+      </form>
+    );
+  }
+}
