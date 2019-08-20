@@ -56,8 +56,6 @@ class App extends Component {
               );
             }}
           />
-        </Router>
-        <Router>
           <Route path="/posts" component={Posts} />
         </Router>
       </div>
